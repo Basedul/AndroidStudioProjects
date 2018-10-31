@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.basedul.houserent.R;
 
@@ -38,6 +39,12 @@ public class HomeDetailsAdapt extends ArrayAdapter<HomeDetails>{
 
         name = (TextView) view.findViewById(R.id.text_view_for_name_of_house_in_list_item_container_xml_file);
         name.setText("Name "+homeDetails.getNameOfHome());
+        name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Bodrujjaman", Toast.LENGTH_LONG).show();
+            }
+        });
 
         location = (TextView) view.findViewById(R.id.textViewForLocationOfHouseInlisetItemContainerXMLfile);
         location.setText("Location "+homeDetails.getLocation());
@@ -47,6 +54,8 @@ public class HomeDetailsAdapt extends ArrayAdapter<HomeDetails>{
 
         homeImage = (ImageView) view.findViewById(R.id.image_view_for_image_show_in_list_item_container_xml_file);
         homeImage.setImageResource(homeDetails.getPhotoOfHome());
+
+
 
         return view;
     }
