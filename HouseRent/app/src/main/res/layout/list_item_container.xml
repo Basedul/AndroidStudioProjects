@@ -50,7 +50,9 @@
         android:layout_alignStart="@+id/text_view_for_name_of_house_in_list_item_container_xml_file"
         android:numStars="5"
         android:rating="1.5"
-        android:stepSize="1.2" />
+        android:stepSize="1.2"
+        android:isIndicator="false"
+        />
 
 
 </RelativeLayout>
